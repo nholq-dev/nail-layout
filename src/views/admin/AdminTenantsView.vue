@@ -2,18 +2,18 @@
   <section class="content-frame dashboard-frame">
     <PageHeader
       kicker="System admin"
-      title="Danh sach tenant"
-      description="Quan ly cac tiem nail dang su dung he thong theo goi, trang thai va ngay het han."
+      title="Danh sách tenant"
+      description="Quản lý các tiệm nail đang sử dụng hệ thống theo gói, trạng thái và ngày hết hạn."
     >
       <template #actions>
-        <router-link class="button primary" to="/admin/tenants/new">Tao tenant</router-link>
+        <router-link class="button primary" to="/admin/tenants/new">Tạo tenant</router-link>
       </template>
     </PageHeader>
-    <ContentToolbar search-placeholder="Tim tenant, salon hoac email chu tiem">
-      <select class="select" aria-label="Trang thai tenant">
-        <option>Tat ca trang thai</option>
-        <option>Dang hoat dong</option>
-        <option>Tam khoa</option>
+    <ContentToolbar search-placeholder="Tìm tenant, salon hoặc email chủ tiệm">
+      <select class="select" aria-label="Trạng thái tenant">
+        <option>Tất cả trạng thái</option>
+        <option>Đang hoạt động</option>
+        <option>Tạm khóa</option>
       </select>
     </ContentToolbar>
     <div class="panel table-wrap">
@@ -21,11 +21,11 @@
         <thead>
           <tr>
             <th>Tenant</th>
-            <th>Chu tiem</th>
-            <th>Goi</th>
-            <th>Trang thai</th>
-            <th>Het han</th>
-            <th>Hanh dong</th>
+            <th>Chủ tiệm</th>
+            <th>Gói</th>
+            <th>Trạng thái</th>
+            <th>Hết hạn</th>
+            <th>Hành động</th>
           </tr>
         </thead>
         <tbody>
@@ -48,7 +48,7 @@ import ContentToolbar from '../../components/ui/ContentToolbar.vue'
 import PageHeader from '../../components/ui/PageHeader.vue'
 
 const tenants = [
-  { name: 'luxe-nail', owner: 'Linh Pham', plan: 'Growth', status: 'Dang hoat dong', expires: '30/06/2026' },
-  { name: 'bloom-bar', owner: 'Vy Nguyen', plan: 'Starter', status: 'Dang hoat dong', expires: '15/06/2026' }
+  { name: 'luxe-nail', owner: 'Linh Phạm', plan: 'Growth', status: 'Đang hoạt động', expires: '30/06/2026' },
+  { name: 'bloom-bar', owner: 'Vy Nguyễn', plan: 'Starter', status: 'Đang hoạt động', expires: '15/06/2026' }
 ]
 </script>

@@ -2,10 +2,10 @@
   <section class="content-frame dashboard-frame">
     <PageHeader
       kicker="System admin"
-      title="Thanh toan SaaS"
-      description="Theo doi hoa don, ngay het han goi va trang thai thanh toan cua tenant."
+      title="Thanh toán SaaS"
+      description="Theo dõi hóa đơn, ngày hết hạn gói và trạng thái thanh toán của tenant."
     />
-    <div class="state-box">Bang thanh toan SaaS se ket noi API billing.</div>
+    <div class="state-box">Bảng thanh toán SaaS sẽ kết nối API billing.</div>
   </section>
 </template>
 

@@ -1,18 +1,18 @@
 <template>
   <section class="content-frame dashboard-frame">
     <PageHeader
-      kicker="Chu tiem"
-      title="Quan ly lich hen"
-      description="Xem lich hen theo ngay, trang thai xac nhan va nhan vien phu trach."
+      kicker="Chủ tiệm"
+      title="Quản lý lịch hẹn"
+      description="Xem lịch hẹn theo ngày, trạng thái xác nhận và nhân viên phụ trách."
     />
-    <ContentToolbar search-placeholder="Tim khach hang hoac ma lich">
-      <select class="select" aria-label="Trang thai">
-        <option>Tat ca trang thai</option>
-        <option>Cho xac nhan</option>
-        <option>Da xac nhan</option>
+    <ContentToolbar search-placeholder="Tìm khách hàng hoặc mã lịch">
+      <select class="select" aria-label="Trạng thái">
+        <option>Tất cả trạng thái</option>
+        <option>Chờ xác nhận</option>
+        <option>Đã xác nhận</option>
       </select>
     </ContentToolbar>
-    <div class="state-box">Loading, empty va error state san sang gan du lieu API.</div>
+    <div class="state-box">Loading, empty và error state sẵn sàng gắn dữ liệu API.</div>
   </section>
 </template>
 

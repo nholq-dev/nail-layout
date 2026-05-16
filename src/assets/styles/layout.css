@@ -46,6 +46,10 @@
   gap: var(--space-sm);
 }
 
+.role-select {
+  width: 180px;
+}
+
 .global-search {
   width: min(420px, 36vw);
 }
@@ -434,7 +438,8 @@
   }
 
   .brand-subtitle,
-  .header-actions .button {
+  .header-actions .button,
+  .role-select {
     display: none;
   }
 

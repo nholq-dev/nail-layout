@@ -1,25 +1,9 @@
 <template>
-  <aside class="app-sidebar" :class="{ open }" aria-label="Dieu huong chinh">
+  <aside class="app-sidebar" :class="{ open }" aria-label="Điều hướng chính">
     <section class="sidebar-section">
-      <p class="sidebar-title">Khach hang</p>
+      <p class="sidebar-title">{{ currentSectionTitle }}</p>
       <ul class="nav-list">
-        <li v-for="item in customerNav" :key="item.to">
-          <router-link class="nav-link" :to="item.to">{{ item.label }}</router-link>
-        </li>
-      </ul>
-    </section>
-    <section class="sidebar-section">
-      <p class="sidebar-title">Chu tiem</p>
-      <ul class="nav-list">
-        <li v-for="item in ownerNav" :key="item.to">
-          <router-link class="nav-link" :to="item.to">{{ item.label }}</router-link>
-        </li>
-      </ul>
-    </section>
-    <section class="sidebar-section">
-      <p class="sidebar-title">Admin he thong</p>
-      <ul class="nav-list">
-        <li v-for="item in adminNav" :key="item.to">
+        <li v-for="item in visibleNav" :key="item.to">
           <router-link class="nav-link" :to="item.to">{{ item.label }}</router-link>
         </li>
       </ul>
@@ -28,31 +12,60 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
+import { useCurrentUser } from '../../composables/useCurrentUser'
+
 defineProps<{
   open: boolean
 }>()
 
+const { currentRole } = useCurrentUser()
+
 const customerNav = [
-  { label: 'Kham pha tiem nail', to: '/salons' },
-  { label: 'Dat lich', to: '/booking' },
-  { label: 'Lich hen cua toi', to: '/appointments' }
+  { label: 'Khám phá tiệm nail', to: '/salons' },
+  { label: 'Đặt lịch', to: '/booking' },
+  { label: 'Lịch hẹn của tôi', to: '/appointments' }
 ]
 
 const ownerNav = [
-  { label: 'Tong quan', to: '/owner' },
-  { label: 'Lich hen', to: '/owner/appointments' },
-  { label: 'Dich vu', to: '/owner/services' },
-  { label: 'Nhan vien', to: '/owner/staff' },
+  { label: 'Tổng quan', to: '/owner' },
+  { label: 'Lịch hẹn', to: '/owner/appointments' },
+  { label: 'Dịch vụ', to: '/owner/services' },
+  { label: 'Nhân viên', to: '/owner/staff' },
   { label: 'Doanh thu', to: '/owner/revenue' },
-  { label: 'Thanh toan', to: '/owner/payments' }
+  { label: 'Thanh toán', to: '/owner/payments' }
 ]
 
 const adminNav = [
-  { label: 'Tong quan he thong', to: '/admin' },
+  { label: 'Tổng quan hệ thống', to: '/admin' },
   { label: 'Tenants', to: '/admin/tenants' },
-  { label: 'Tao tenant', to: '/admin/tenants/new' },
-  { label: 'Goi dich vu', to: '/admin/plans' },
-  { label: 'Thanh toan SaaS', to: '/admin/billing' },
-  { label: 'Nguoi dung', to: '/admin/users' }
+  { label: 'Tạo tenant', to: '/admin/tenants/new' },
+  { label: 'Gói dịch vụ', to: '/admin/plans' },
+  { label: 'Thanh toán SaaS', to: '/admin/billing' },
+  { label: 'Người dùng', to: '/admin/users' }
 ]
+
+const visibleNav = computed(() => {
+  if (currentRole.value === 'admin') {
+    return adminNav
+  }
+
+  if (currentRole.value === 'owner') {
+    return ownerNav
+  }
+
+  return customerNav
+})
+
+const currentSectionTitle = computed(() => {
+  if (currentRole.value === 'admin') {
+    return 'Quản trị hệ thống'
+  }
+
+  if (currentRole.value === 'owner') {
+    return 'Quản lý tiệm nail'
+  }
+
+  return 'Khách hàng'
+})
 </script>

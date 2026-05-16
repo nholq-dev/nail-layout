@@ -1,27 +1,27 @@
 <template>
   <section class="content-frame">
     <PageHeader
-      kicker="Khach hang"
-      title="Tim tiem nail gan ban"
-      description="Kham pha cac tiem nail gan vi tri hien tai, xem danh gia va dat lich nhanh."
+      kicker="Khách hàng"
+      title="Tìm tiệm nail gần bạn"
+      description="Khám phá các tiệm nail gần vị trí hiện tại, xem đánh giá và đặt lịch nhanh."
     >
       <template #actions>
-        <router-link class="button primary" to="/booking">Dat lich ngay</router-link>
+        <router-link class="button primary" to="/booking">Đặt lịch ngay</router-link>
       </template>
     </PageHeader>
 
-    <ContentToolbar search-placeholder="Nhap dia diem hoac ten salon">
-      <select class="select" aria-label="Khoang cach">
-        <option>Duoi 3 km</option>
-        <option>Duoi 5 km</option>
-        <option>Duoi 10 km</option>
+    <ContentToolbar search-placeholder="Nhập địa điểm hoặc tên salon">
+      <select class="select" aria-label="Khoảng cách">
+        <option>Dưới 3 km</option>
+        <option>Dưới 5 km</option>
+        <option>Dưới 10 km</option>
       </select>
-      <select class="select" aria-label="Dich vu">
+      <select class="select" aria-label="Dịch vụ">
         <option>Manicure</option>
         <option>Pedicure</option>
         <option>Nail art</option>
       </select>
-      <button class="button" type="button">Dung vi tri hien tai</button>
+      <button class="button" type="button">Dùng vị trí hiện tại</button>
     </ContentToolbar>
 
     <div class="grid two">
@@ -31,11 +31,11 @@
           <h2 class="panel-title">{{ salon.name }}</h2>
           <p class="muted">{{ salon.address }} - {{ salon.distance }}</p>
           <p>{{ salon.services }}</p>
-          <router-link class="button" to="/salons/demo-luxe">Xem chi tiet</router-link>
+          <router-link class="button" to="/salons/demo-luxe">Xem chi tiết</router-link>
         </article>
       </div>
       <aside class="map-placeholder state-box">
-        Ban do vi tri salon
+        Bản đồ vị trí salon
       </aside>
     </div>
   </section>
@@ -58,7 +58,7 @@ const salons = [
     address: '88 Le Loi',
     distance: '2.4 km',
     rating: '4.8',
-    services: 'Manicure, acrylic, cham soc mong'
+    services: 'Manicure, acrylic, chăm sóc móng'
   },
   {
     name: 'Soft Touch Nails',

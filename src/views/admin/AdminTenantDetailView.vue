@@ -3,35 +3,35 @@
     <PageHeader
       kicker="System admin"
       title="Tenant: luxe-nail"
-      description="Thong tin salon, chu tiem, goi dich vu, thanh toan SaaS va nhat ky hoat dong."
+      description="Thông tin salon, chủ tiệm, gói dịch vụ, thanh toán SaaS và nhật ký hoạt động."
     >
       <template #actions>
-        <button class="button" type="button">Tam khoa</button>
-        <button class="button primary" type="button">Gia han</button>
+        <button class="button" type="button">Tạm khóa</button>
+        <button class="button primary" type="button">Gia hạn</button>
       </template>
     </PageHeader>
 
     <div class="grid three">
       <article class="card">
-        <span class="muted">Goi hien tai</span>
+        <span class="muted">Gói hiện tại</span>
         <p class="metric-value">Growth</p>
       </article>
       <article class="card">
-        <span class="muted">Nhan vien</span>
+        <span class="muted">Nhân viên</span>
         <p class="metric-value">12</p>
       </article>
       <article class="card">
-        <span class="muted">Lich hen thang nay</span>
+        <span class="muted">Lịch hẹn tháng này</span>
         <p class="metric-value">842</p>
       </article>
     </div>
 
     <section class="panel" style="margin-top: 16px">
       <div class="panel-header">
-        <h2 class="panel-title">Nhat ky hoat dong</h2>
+        <h2 class="panel-title">Nhật ký hoạt động</h2>
       </div>
-      <div class="panel-row">Chu tiem cap nhat bang gia dich vu.</div>
-      <div class="panel-row">He thong tao hoa don SaaS thang 05/2026.</div>
+      <div class="panel-row">Chủ tiệm cập nhật bảng giá dịch vụ.</div>
+      <div class="panel-row">Hệ thống tạo hóa đơn SaaS tháng 05/2026.</div>
     </section>
   </section>
 </template>

@@ -7,7 +7,7 @@
         v-if="sidebarOpen"
         class="sidebar-overlay"
         type="button"
-        aria-label="Dong menu"
+        aria-label="Đóng menu"
         @click="closeSidebar"
       />
       <main class="main-content">

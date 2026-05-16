@@ -2,8 +2,8 @@
   <section class="content-frame dashboard-frame">
     <PageHeader
       kicker="System admin"
-      title="Goi dich vu SaaS"
-      description="Quan ly cac goi Starter, Growth, Scale va gioi han tinh nang."
+      title="Gói dịch vụ SaaS"
+      description="Quản lý các gói Starter, Growth, Scale và giới hạn tính năng."
     />
     <div class="grid three">
       <article v-for="plan in plans" :key="plan.name" class="card">
@@ -19,8 +19,8 @@
 import PageHeader from '../../components/ui/PageHeader.vue'
 
 const plans = [
-  { name: 'Starter', price: '1,2 tr/thang', limit: '1 salon, 5 nhan vien' },
-  { name: 'Growth', price: '2,8 tr/thang', limit: '3 salon, 30 nhan vien' },
-  { name: 'Scale', price: 'Lien he', limit: 'Multi-branch va SLA rieng' }
+  { name: 'Starter', price: '1,2 tr/tháng', limit: '1 salon, 5 nhân viên' },
+  { name: 'Growth', price: '2,8 tr/tháng', limit: '3 salon, 30 nhân viên' },
+  { name: 'Scale', price: 'Liên hệ', limit: 'Multi-branch và SLA riêng' }
 ]
 </script>

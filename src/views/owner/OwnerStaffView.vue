@@ -1,12 +1,12 @@
 <template>
   <section class="content-frame dashboard-frame">
     <PageHeader
-      kicker="Chu tiem"
-      title="Nhan vien"
-      description="Quan ly ho so, ca lam viec, hieu suat va trang thai lam viec."
+      kicker="Chủ tiệm"
+      title="Nhân viên"
+      description="Quản lý hồ sơ, ca làm việc, hiệu suất và trạng thái làm việc."
     >
       <template #actions>
-        <button class="button primary" type="button">Them nhan vien</button>
+        <button class="button primary" type="button">Thêm nhân viên</button>
       </template>
     </PageHeader>
 
@@ -15,7 +15,7 @@
         <span class="badge success">{{ staff.status }}</span>
         <h2 class="panel-title">{{ staff.name }}</h2>
         <p class="muted">{{ staff.role }}</p>
-        <p>{{ staff.bookings }} lich hen - {{ staff.revenue }} doanh thu</p>
+        <p>{{ staff.bookings }} lịch hẹn - {{ staff.revenue }} doanh thu</p>
       </article>
     </div>
   </section>
@@ -25,8 +25,8 @@
 import PageHeader from '../../components/ui/PageHeader.vue'
 
 const staffList = [
-  { name: 'Linh Pham', role: 'Senior technician', status: 'Dang lam', bookings: 8, revenue: '3,2 tr' },
-  { name: 'Vy Nguyen', role: 'Nail artist', status: 'Dang lam', bookings: 6, revenue: '2,7 tr' },
-  { name: 'Hanh Le', role: 'Pedicure specialist', status: 'Nghi ca chieu', bookings: 4, revenue: '1,8 tr' }
+  { name: 'Linh Phạm', role: 'Kỹ thuật viên senior', status: 'Đang làm', bookings: 8, revenue: '3,2 tr' },
+  { name: 'Vy Nguyễn', role: 'Nail artist', status: 'Đang làm', bookings: 6, revenue: '2,7 tr' },
+  { name: 'Hạnh Lê', role: 'Chuyên viên pedicure', status: 'Nghỉ ca chiều', bookings: 4, revenue: '1,8 tr' }
 ]
 </script>

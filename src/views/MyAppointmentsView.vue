@@ -1,9 +1,9 @@
 <template>
   <section class="content-frame">
     <PageHeader
-      kicker="Khach hang"
-      title="Lich hen cua toi"
-      description="Theo doi lich sap toi, lich da hoan thanh va trang thai xac nhan."
+      kicker="Khách hàng"
+      title="Lịch hẹn của tôi"
+      description="Theo dõi lịch sắp tới, lịch đã hoàn thành và trạng thái xác nhận."
     />
 
     <div class="panel table-wrap">
@@ -11,10 +11,10 @@
         <thead>
           <tr>
             <th>Salon</th>
-            <th>Dich vu</th>
-            <th>Thoi gian</th>
-            <th>Trang thai</th>
-            <th>Hanh dong</th>
+            <th>Dịch vụ</th>
+            <th>Thời gian</th>
+            <th>Trạng thái</th>
+            <th>Hành động</th>
           </tr>
         </thead>
         <tbody>
@@ -35,7 +35,7 @@
 import PageHeader from '../components/ui/PageHeader.vue'
 
 const appointments = [
-  { salon: 'Luxe Nail Studio', service: 'Gel manicure', time: '18/05 09:30', status: 'Da xac nhan' },
-  { salon: 'Bloom Beauty Bar', service: 'Pedicure', time: '22/05 14:00', status: 'Cho xac nhan' }
+  { salon: 'Luxe Nail Studio', service: 'Gel manicure', time: '18/05 09:30', status: 'Đã xác nhận' },
+  { salon: 'Bloom Beauty Bar', service: 'Pedicure', time: '22/05 14:00', status: 'Chờ xác nhận' }
 ]
 </script>

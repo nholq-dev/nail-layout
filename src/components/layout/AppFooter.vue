@@ -1,5 +1,5 @@
 <template>
   <footer class="app-footer">
-    NailOps layout prototype - customer booking, salon operations, and SaaS admin.
+    NailOps layout prototype - đặt lịch khách hàng, vận hành tiệm nail và quản trị SaaS.
   </footer>
 </template>
